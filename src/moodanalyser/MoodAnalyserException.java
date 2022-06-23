@@ -5,7 +5,7 @@ public class MoodAnalyserException {
         if (message.contains(("sad")) || message.contains(("Sad")) || message.contains(("SAD"))){
             return "SAD";
         } else {
-            return "happy";
+            return "HAPPY";
         }
     }
 }
