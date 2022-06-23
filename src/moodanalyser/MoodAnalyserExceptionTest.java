@@ -7,7 +7,7 @@ public class MoodAnalyserExceptionTest {
     @Test
     public void analyseMoodTest() throws Exception{
         MoodAnalyserException obj = new MoodAnalyserException();
-        String mood = obj.analyseMood("I am sad today");
-        Assert.assertEquals("sad", mood);
+        String mood = obj.analyseMood("I am in Sad mood");
+        Assert.assertEquals("SAD", mood);
     }
 }
