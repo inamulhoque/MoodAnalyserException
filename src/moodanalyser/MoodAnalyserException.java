@@ -6,18 +6,19 @@ public class MoodAnalyserException extends Throwable {
     public MoodAnalyserException(String message) {
         this.message = message;
     }
-    public MoodAnalyserException(){
-        this.message = null;
+
+    public void MoodAnalyserException(String message) {
+        this.message = message;
     }
 
-    public String analyseMood() {
+    public String analyseMood() throws MoodAnalyserException{
         try {
-            if (message.contains(("sad")) || message.contains(("Sad")) || message.contains(("SAD")))
+            if (this.message.contains(("SAD")) || this.message.contains(("Sad")) || this.message.contains(("sad")))
                 return "SAD";
             else
                 return "HAPPY";
         } catch (NullPointerException e) {
-            return "HAPPY";
+            throw new MoodAnalyserException("Enter valid message, your message is empty");
         }
     }
 }
