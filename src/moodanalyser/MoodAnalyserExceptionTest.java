@@ -13,6 +13,6 @@ public class MoodAnalyserExceptionTest {
     @Test
     public void analyseMoodTest(){
         String mood = obj.analyseMood();
-        Assert.assertEquals("Happy",mood);
+        Assert.assertEquals("HAPPY",mood);
     }
 }
