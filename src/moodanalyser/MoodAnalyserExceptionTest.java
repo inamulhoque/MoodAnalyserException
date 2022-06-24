@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 public class MoodAnalyserExceptionTest {
     @Test
-    public void analyseMoodTest() throws Exception{
+    public void analyseMoodTest(){
         MoodAnalyserException obj = new MoodAnalyserException();
-        String mood = obj.analyseMood("I am sad today");
-        Assert.assertEquals("sad", mood);
+        String message = obj.analyseMood("I am sad today");
+        Assert.assertEquals("Sad", message);
     }
 }
