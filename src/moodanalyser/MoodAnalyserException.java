@@ -3,6 +3,7 @@ package moodanalyser;
 public class MoodAnalyserException {
     String message;
     public MoodAnalyserException(String message) {
+        super();
         this.message = message;
     }
 
