@@ -1,24 +1,12 @@
 package moodanalyser;
 
-public class MoodAnalyserException extends Throwable {
-    String message;
-
-    public MoodAnalyserException(String message) {
-        this.message = message;
+public class MoodAnalyserException extends Exception{
+    public enum ExceptionType{
+        NullMessage,EmptyMessage;
     }
-
-    public void MoodAnalyserException(String message) {
-        this.message = message;
-    }
-
-    public String analyseMood() throws MoodAnalyserException{
-        try {
-            if (this.message.contains(("SAD")) || this.message.contains(("Sad")) || this.message.contains(("sad")))
-                return "SAD";
-            else
-                return "HAPPY";
-        } catch (NullPointerException e) {
-            throw new MoodAnalyserException("Enter valid message, your message is empty");
-        }
+    public ExceptionType type;
+    public MoodAnalyserException(ExceptionType type, String message){
+        super(message);
+        this.type = type;
     }
 }
